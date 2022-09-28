@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="csrf_token" content="QfFlHSOX4iRoflN41QxIjAzqG2kBCvrQPgAgo951">
+
+  <title>The Index | LogIn</title>
+  <link rel="stylesheet" href="./LoginPage_files/bootstrap.min.css">
+  <link href="./LoginPage_files/all.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="./LoginPage_files/custom.css">
+  <link rel="stylesheet" href="./LoginPage_files/custom-login.css">
+  <script src="./LoginPage_files/jquery.min.js"></script>
+  <script src="./LoginPage_files/bootstrap.min.js"></script>
+
+  <script src="./LoginPage_files/login.js"></script>
+  <script src="./LoginPage_files/commons.js"></script>
+
+  </script>
+  <link rel="icon" href="./LoginPage_files/Logo.jpg">
+  <link rel="shortcut icon" href="./LoginPage_files/Logo.jpg" type="image/x-icon">
+  <link rel="apple-touch-icon" href="./LoginPage_files/Logo.jpg">
+</head>
+
+<body>
+
+  <div class="container">
+
+
+    <script src="./LoginPage_files/api.js"></script>
+    <script>
+
+      function initRecapatcha() {
+        grecaptcha.ready(function () {
+          grecaptcha.execute('', { action: 'login_page' }).then(function (token) {
+            $('#_recaptcha').val(token);
+          });
+        });
+      }
+
+      if ('function' === typeof initRecapatcha) {
+        initRecapatcha();
+        setInterval(function () {
+          initRecapatcha();
+        }, 60 * 1000);
+      }
+
+    </script>
+
+    <div class="row">
+
+      <div class="col-lg-5 col-md-12 col-xs-12 col-centered mt-70">
+        <div class="login-panel card card-primary page-container">
+          <div class="card-heading text-center">
+            <h4 class="card-title welcome-title">
+              The Index <br> Welcome Back !
+            </h4>
+            <p>Glad to see you again !</p>
+          </div>
+          <div class="card-body">
+            <form action="https://x8ki-letl-twmt.n7.xano.io/api:FjUFtpoq/auth/login" method="post" class="login_form" >
+              <fieldset>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroup-sizing-sm"><i
+                          class="fa fa-envelope"></i></span>
+                    </div>
+                    <input class="form-control" placeholder="Enter your email " name="email" type="email" autofocus=""
+                      required="" autocomplete="off">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroup-sizing-sm"><i
+                          class="fa fa-key"></i></span>
+                    </div>
+                    <input class="form-control" placeholder="Enter your " name="password" type="password" value=""
+                      required="">
+                  </div>
+                  </noscript>
+
+                </div>
+
+                <div class="form-group">
+                  <div id="login_status"></div>
+                </div>
+                <div class="form-group">
+                  <button type="submit" class="btn btn-block">
+                    Login
+                  </button>
+                  <p>
+                    <br>
+                    <a href="./Reset Password Page.html">Forgot password? </a> - Need an account?
+                    <a href="./SignUpPage.html" class=" ">Sign up</a>
+                  </p>
+                </div>
+                <div class="form-group text-center"></div>
+              </fieldset>
+              <input type="hidden" id="_recaptcha" name="_recaptcha"
+                value="03AIIukzhgdkAnx4QRrpW4Mv_Xd7cAxxAFx52shCw4KSi1CGLOjqW-E3I0HLgUUI61mYBCcBkn2X9iKH1ZpMQjANCy-h-Xoij3AtAuPPZTCW2ZDBcc457bEtHLmcYXv1K1uF9Ji3i0UndaO7xMp9hp7AkAPJmIo-sFcM7jc_Ld1jy97K2Wzh-wBbehLYI_V1ij0tfi-YEUQn2EN0w0J8UkjY9cfGP8OzaazE_TC0iPsfC3_bfw_b6NjIqFMQ25WBwFTMHtuFVXTsqYw9SQdHhOYpxAawLlPKcnLHp0MfgVE97IxruH_345TclsOrINhT1K19Uui_1JGm9aUhiVlv4YmxZZtePVEJGTlemGfIrmwEBV24OpiECx49FmHPRutSf8zXoXOgfqz4eAoVYrIC7Qngv-XhjBc-uCLup8UElzBGjcSVNHyoaxSw5S2KcrkIgrgIPHK7B9VsztHR_26zkITjQQb0w2Bm90JAKO_E9wYlFOv3BlXZxWR529zjZgpXBuqFYhP4fQnMwB">
+            </form>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+
+
+
+  <div>
+    <div class="grecaptcha-badge" data-style="bottomright"
+      style="width: 256px; height: 60px; display: block; transition: right 0.3s ease 0s; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;">
+      <div class="grecaptcha-logo"><iframe title="reCAPTCHA" src="./LoginPage_files/anchor(1).html" width="256"
+          height="60" role="presentation" name="a-9iur5cwtzpvh" frameborder="0" scrolling="no"
+          sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe>
+      </div>
+      <div class="grecaptcha-error"></div><textarea id="g-recaptcha-response-100000" name="g-recaptcha-response"
+        class="g-recaptcha-response"
+        style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+    </div>
+  </div>
+  <div
+    style="background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px; position: absolute; transition: visibility 0s linear 0.3s, opacity 0.3s linear 0s; opacity: 0; visibility: hidden; z-index: 2000000000; left: 0px; top: -10000px;">
+    <div
+      style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.05;">
+    </div>
+    <div class="g-recaptcha-bubble-arrow"
+      style="border: 11px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -11px; z-index: 2000000000;">
+    </div>
+    <div class="g-recaptcha-bubble-arrow"
+      style="border: 10px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000;">
+    </div>
+    <div style="z-index: 2000000000; position: relative;"><iframe title="recaptcha challenge expires in two minutes"
+        src="./LoginPage_files/bframe.html" name="c-v12fe9pwtx" frameborder="0" scrolling="no"
+        sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"
+        style="width: 100%; height: 100%;"></iframe></div>
+  </div>
+</body>
+
+</html>
